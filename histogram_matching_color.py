@@ -2,6 +2,7 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 # load image
 img = cv2.imread('C:/Users/hsyal/Desktop/etrimask_256_results_0/000004-005.png', cv2.IMREAD_COLOR)
 target = cv2.imread('C:/Users/hsyal/Desktop/etri_maskDB/mask_skincolor_images/000004-005.jpg', cv2.IMREAD_COLOR)

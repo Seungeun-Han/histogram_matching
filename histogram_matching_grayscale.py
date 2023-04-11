@@ -7,6 +7,7 @@ img = cv2.imread('C:/Users/hsyal/Desktop/etrimask_256_results_0/000004-005.png',
 target = cv2.imread('C:/Users/hsyal/Desktop/etri_maskDB/mask_skincolor_images/000004-005.jpg', cv2.IMREAD_GRAYSCALE)
 
 
+
 shape = img.shape
 original = img.ravel()
 specified = target.ravel()
