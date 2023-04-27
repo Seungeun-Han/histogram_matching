@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 # 입력 이미지와 목표 히스토그램 이미지 로드
-srcImage = cv2.imread("C:/Users/hsyal/Desktop/etrimask_256_results_0/000004-005.png")
-dstImage = cv2.imread("C:/Users/hsyal/Desktop/etri_maskDB/mask_skincolor_images/000004-005.jpg")
+srcImage = cv2.imread("./forest.png")
+dstImage = cv2.imread("./sea.png")
 
 # 입력 이미지와 목표 히스토그램을 YCrCb 색 공간으로 변환
 srcYCrCb = cv2.cvtColor(srcImage, cv2.COLOR_BGR2YCrCb)
@@ -18,6 +18,13 @@ accumulate = False
 srcHist = cv2.calcHist([srcYCrCb], [0], None, [histSize], histRange, uniform, accumulate)
 dstHist = cv2.calcHist([dstYCrCb], [0], None, [histSize], histRange, uniform, accumulate)
 
+srcCdf_norm = cv2.normalize(srcHist, None, 0, 1, cv2.NORM_MINMAX)
+dstCdf_norm = cv2.normalize(dstHist, None, 0, 1, cv2.NORM_MINMAX)
+
+# # 배경 제거
+# srcHist[0] = [0]
+# dstHist[0] = [0]
+
 # 누적 분포 함수 계산
 srcCdf = srcHist.copy()
 dstCdf = dstHist.copy()
@@ -25,13 +32,16 @@ for i in range(1, histSize):
     srcCdf[i] += srcCdf[i - 1]
     dstCdf[i] += dstCdf[i - 1]
 
+srcCdf_norm = cv2.normalize(srcCdf, None, 0, 1, cv2.NORM_MINMAX)
+dstCdf_norm = cv2.normalize(dstCdf, None, 0, 1, cv2.NORM_MINMAX)
+
 # 히스토그램 매칭
 lut = np.zeros((1, 256), dtype=np.uint8)
 for i in range(histSize):
     minDiff = float('inf')
     index = 0
     for j in range(histSize):
-        diff = abs(srcCdf[i] - dstCdf[j])
+        diff = abs(srcCdf_norm[i] - dstCdf_norm[j])
         if diff < minDiff:
             minDiff = diff
             index = j
