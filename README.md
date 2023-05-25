@@ -85,7 +85,7 @@ face parsing을 통해 mask 영역을 segmentation 하고, 해당 영역을 inpa
 ```
 mkdir ${YOUR_PROJECT_NAME}
 cd ${YOUR_PROJECT_NAME}
-git clone https://github.com/google-research/deeplab2.gitmkdir
+git clone https://github.com/google-research/deeplab2.gitmkdir](https://github.com/Seungeun-Han/histogram_matching.git
 ```
 
 
