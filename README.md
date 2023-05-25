@@ -30,7 +30,9 @@
 
 ![out](https://github.com/Seungeun-Han/histogram_matching/assets/101082685/72119d4f-a929-4c2c-ab45-4de27733bcf8)
 
-<br>
+
+<hr>
+
 
 ## 우리가 하려는 것
 
@@ -59,4 +61,22 @@ face parsing을 통해 mask 영역을 segmentation 하고, 해당 영역을 inpa
 - output
 
 각 채널 별로 히스토그램 매칭이 잘 되었는지 확인하기 위해 히스토그램을 출력하였다.
+왼쪽은 원본 영상의 히스토그램, 중간은 타겟 영상의 히스토그램, 오른쪽은 결과 영상의 히스토그램이다.
+
+- b channel
+
+![KakaoTalk_20230525_200944778_01](https://github.com/Seungeun-Han/histogram_matching/assets/101082685/2ab767ab-51bf-4539-9eef-74a995e89370)
+
+- g channel
+
+![KakaoTalk_20230525_200944778_02](https://github.com/Seungeun-Han/histogram_matching/assets/101082685/b429d09a-1c66-4c33-8c1a-1ea9a3411d8a)
+
+- r channel
+
+![KakaoTalk_20230525_200944778_03](https://github.com/Seungeun-Han/histogram_matching/assets/101082685/8faa8a4f-84c3-4f08-8bb8-6f9c00578593)
+
+
+원본 영상과 히스토그램이 비슷해진것을 볼 수 있다.
+
+
 
