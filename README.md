@@ -79,4 +79,13 @@ face parsing을 통해 mask 영역을 segmentation 하고, 해당 영역을 inpa
 원본 영상과 히스토그램이 비슷해진것을 볼 수 있다.
 
 
+## How to use?
+이 repository를 clone하고 histogram_matching_color_image.py 코드를 실행하면 된다.
+
+```
+mkdir ${YOUR_PROJECT_NAME}
+cd ${YOUR_PROJECT_NAME}
+git clone https://github.com/google-research/deeplab2.gitmkdir
+```
+
 
