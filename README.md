@@ -30,7 +30,7 @@
 
 ![out](https://github.com/Seungeun-Han/histogram_matching/assets/101082685/72119d4f-a929-4c2c-ab45-4de27733bcf8)
 
-
+<br>
 
 ## 우리가 하려는 것
 
@@ -40,7 +40,7 @@ face parsing을 통해 mask 영역을 segmentation 하고, 해당 영역을 inpa
 
 하지만 inpainting 모델의 복원 결과 코나 입 부분의 shape은 잘 복원 되지만, 피부톤이 blue가 강조되며 복원되는 것을 볼 수 있었다.
 
-<img width="362" alt="1" src="https://github.com/Seungeun-Han/histogram_matching/assets/101082685/c333119a-6574-4c10-9302-b3084782bd82">
+<src="https://github.com/Seungeun-Han/histogram_matching/assets/101082685/c333119a-6574-4c10-9302-b3084782bd82">
 
 그래서 inpainting 된 영역의 히스토그램을 피부 영역의 히스토그램으로 매칭시켜 파란 부분 보정하기 위해 히스토그램 매칭을 사용하였다.
 
